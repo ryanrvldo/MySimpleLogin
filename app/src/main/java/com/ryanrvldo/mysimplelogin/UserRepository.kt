@@ -1,25 +1,19 @@
 package com.ryanrvldo.mysimplelogin
 
-class UserRepository(private val sesi: SessionManager) {
+import javax.inject.Inject
+import javax.inject.Singleton
 
-    companion object {
-        @Volatile
-        private var instance: UserRepository? = null
-
-        fun getInstance(sesi: SessionManager): UserRepository =
-            instance ?: synchronized(this) {
-                instance ?: UserRepository(sesi)
-            }
-    }
+@Singleton
+class UserRepository @Inject constructor(private val sessionManager: SessionManager) {
 
     fun loginUser(username: String) {
-        sesi.createLoginSession()
-        sesi.saveToPreference(SessionManager.KEY_USERNAME, username)
+        sessionManager.createLoginSession()
+        sessionManager.saveToPreference(SessionManager.KEY_USERNAME, username)
     }
 
-    fun getUser() = sesi.getFromPreference(SessionManager.KEY_USERNAME)
+    fun getUser() = sessionManager.getFromPreference(SessionManager.KEY_USERNAME)
 
-    fun isUserLogin() = sesi.isLogin
+    fun isUserLogin() = sessionManager.isLogin
 
-    fun logoutUser() = sesi.logout()
+    fun logoutUser() = sessionManager.logout()
 }
