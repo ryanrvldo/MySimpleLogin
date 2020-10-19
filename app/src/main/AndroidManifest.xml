@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dicoding.mysimplelogin">
+    package="com.ryanrvldo.mysimplelogin">
 
     <application
+        android:name=".BaseApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.dicoding.mysimplelogin.HomeActivity" />
-        <activity android:name="com.dicoding.mysimplelogin.MainActivity">
+        <activity android:name="com.ryanrvldo.mysimplelogin.HomeActivity" />
+        <activity android:name="com.ryanrvldo.mysimplelogin.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
