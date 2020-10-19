@@ -1,4 +1,4 @@
-package com.dicoding.mysimplelogin
+package com.ryanrvldo.mysimplelogin
 
 class UserRepository(private val sesi: SessionManager) {
 

@@ -1,4 +1,4 @@
-package com.dicoding.mysimplelogin
+package com.ryanrvldo.mysimplelogin
 
 import android.content.Intent
 import android.os.Bundle
