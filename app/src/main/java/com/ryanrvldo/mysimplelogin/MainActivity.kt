@@ -13,8 +13,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val sesi = SessionManager(this)
-        userRepository = UserRepository.getInstance(sesi)
+        val sessionManager = SessionManager(this)
+        userRepository = UserRepository.getInstance(sessionManager)
 
         if (userRepository.isUserLogin()) {
             moveToHomeActivity()

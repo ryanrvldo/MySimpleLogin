@@ -13,8 +13,8 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        val sesi = SessionManager(this)
-        userRepository = UserRepository.getInstance(sesi)
+        val sessionManager = SessionManager(this)
+        userRepository = UserRepository.getInstance(sessionManager)
 
         tv_welcome.text = "Welcome ${userRepository.getUser()}"
 

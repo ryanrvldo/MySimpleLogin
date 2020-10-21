@@ -1,6 +1,6 @@
 package com.ryanrvldo.mysimplelogin
 
-class UserRepository(private val sesi: SessionManager) {
+class UserRepository(private val sessionManager: SessionManager) {
 
     companion object {
         @Volatile
@@ -13,13 +13,13 @@ class UserRepository(private val sesi: SessionManager) {
     }
 
     fun loginUser(username: String) {
-        sesi.createLoginSession()
-        sesi.saveToPreference(SessionManager.KEY_USERNAME, username)
+        sessionManager.createLoginSession()
+        sessionManager.saveToPreference(SessionManager.KEY_USERNAME, username)
     }
 
-    fun getUser() = sesi.getFromPreference(SessionManager.KEY_USERNAME)
+    fun getUser() = sessionManager.getFromPreference(SessionManager.KEY_USERNAME)
 
-    fun isUserLogin() = sesi.isLogin
+    fun isUserLogin() = sessionManager.isLogin
 
-    fun logoutUser() = sesi.logout()
+    fun logoutUser() = sessionManager.logout()
 }
