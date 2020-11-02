@@ -1,4 +1,4 @@
-package com.ryanrvldo.mysimplelogin
+package com.ryanrvldo.core
 
 class UserRepository(private val sessionManager: SessionManager) {
 
@@ -6,9 +6,9 @@ class UserRepository(private val sessionManager: SessionManager) {
         @Volatile
         private var instance: UserRepository? = null
 
-        fun getInstance(sesi: SessionManager): UserRepository =
+        fun getInstance(session: SessionManager): UserRepository =
             instance ?: synchronized(this) {
-                instance ?: UserRepository(sesi)
+                instance ?: UserRepository(session)
             }
     }
 

@@ -1,4 +1,4 @@
-package com.ryanrvldo.mysimplelogin
+package com.ryanrvldo.core
 
 import android.content.Context
 import android.content.SharedPreferences

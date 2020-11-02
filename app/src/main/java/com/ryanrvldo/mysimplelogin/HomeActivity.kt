@@ -3,6 +3,8 @@ package com.ryanrvldo.mysimplelogin
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.ryanrvldo.core.SessionManager
+import com.ryanrvldo.core.UserRepository
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
