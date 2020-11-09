@@ -1,4 +1,4 @@
-package com.ryanrvldo.core
+package com.ryanrvldo.mysimplelogin.core
 
 class UserRepository(private val sessionManager: SessionManager) {
 

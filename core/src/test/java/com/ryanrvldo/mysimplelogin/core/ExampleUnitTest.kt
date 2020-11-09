@@ -1,4 +1,4 @@
-package com.ryanrvldo.core
+package com.ryanrvldo.mysimplelogin.core
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
